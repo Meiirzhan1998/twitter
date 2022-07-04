@@ -1,7 +1,7 @@
 package com.meiirzhan.twitter.service.impl;
 
-import com.meiirzhan.twitter.Entity.BlogEntity;
-import com.meiirzhan.twitter.Entity.UserEntity;
+import com.meiirzhan.twitter.entity.BlogEntity;
+import com.meiirzhan.twitter.entity.UserEntity;
 import com.meiirzhan.twitter.dto.BlogDto;
 import com.meiirzhan.twitter.dto.UserDto;
 import com.meiirzhan.twitter.repositories.BlogRepo;
@@ -50,7 +50,6 @@ public class BlogServiceImpl implements IBlogService {
             dto.setTitle(blogEntity.getTitle());
             dto.setDescription(blogEntity.getDescription());
         }
-
         UserEntity userEntity = blogEntity.getUserEntity();
         if (userEntity != null) {
             UserDto userDto = new UserDto();
@@ -61,7 +60,6 @@ public class BlogServiceImpl implements IBlogService {
             userDto.setPhone(userEntity.getLogin());
             dto.setUserDto(userDto);
         }
-
         return dto;
     }
 
@@ -73,15 +71,6 @@ public class BlogServiceImpl implements IBlogService {
         }
         return blogDtoList;
     }
-
-//    public BlogDto mapToEntity(Blog blog) {
-//        BlogDto blogDto = new BlogDto();
-//        blogDto.setId(blog.getId());
-//        blogDto.setTitle(blog.getTitle());
-//        blogDto.setDescription(blog.getDescription());
-//        return blogDto;
-//    }
-
 
 
     public java.util.List<BlogDto> findByFilter(String filter) {

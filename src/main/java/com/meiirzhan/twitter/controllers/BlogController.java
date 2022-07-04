@@ -4,6 +4,7 @@ import com.meiirzhan.twitter.dto.BlogDto;
 import com.meiirzhan.twitter.service.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("/blog")
@@ -17,12 +18,12 @@ public class BlogController {
     }
 
     @GetMapping("getAllByUserId/{id}")
-    public java.util.List getAllByUserId(@PathVariable long id) {
+    public List getAllByUserId(@PathVariable long id) {
         return iBlogService.getAllByUserId(id);
     }
 
     @GetMapping("/findByFilter/{filter}")
-    public java.util.List<BlogDto> findByFilter(@PathVariable String filter) {
+    public List<BlogDto> findByFilter(@PathVariable String filter) {
         return iBlogService.findByFilter(filter);
     }
 }

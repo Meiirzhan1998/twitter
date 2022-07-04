@@ -1,13 +1,13 @@
-package com.meiirzhan.twitter.Entity;
+package com.meiirzhan.twitter.entity;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-
+import java.util.List;
 import javax.persistence.*;
 
 @Data
 @RequiredArgsConstructor
-@Entity(name = "users")
+@Entity(name = "twitter_user")
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,7 +24,7 @@ public class UserEntity {
     private String password;
 
     @OneToMany
-    private java.util.List<BlogEntity> blogEntities;
+    private List<BlogEntity> blogEntities;
 }
 
 

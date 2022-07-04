@@ -1,6 +1,6 @@
 package com.meiirzhan.twitter.service.impl;
 
-import com.meiirzhan.twitter.Entity.UserEntity;
+import com.meiirzhan.twitter.entity.UserEntity;
 import com.meiirzhan.twitter.dto.UserDto;
 import com.meiirzhan.twitter.repositories.UserRepository;
 import com.meiirzhan.twitter.service.IUserService;

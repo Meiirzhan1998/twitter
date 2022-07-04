@@ -1,13 +1,14 @@
-package com.meiirzhan.twitter.Entity;
+package com.meiirzhan.twitter.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+
 import javax.persistence.*;
 
 @Data
 @RequiredArgsConstructor
-@Entity(name = "blogs")
+@Entity(name = "blog")
 public class BlogEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -19,5 +20,6 @@ public class BlogEntity {
 
     @ManyToOne
     @JsonIgnore
+    @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 }

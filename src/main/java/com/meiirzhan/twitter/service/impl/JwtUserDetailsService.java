@@ -1,6 +1,6 @@
 package com.meiirzhan.twitter.service.impl;
 
-import com.meiirzhan.twitter.Entity.UserEntity;
+import com.meiirzhan.twitter.entity.UserEntity;
 import com.meiirzhan.twitter.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

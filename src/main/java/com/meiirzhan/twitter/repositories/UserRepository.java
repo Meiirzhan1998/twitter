@@ -1,6 +1,6 @@
 package com.meiirzhan.twitter.repositories;
 
-import com.meiirzhan.twitter.Entity.UserEntity;
+import com.meiirzhan.twitter.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
